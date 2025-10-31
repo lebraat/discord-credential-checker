@@ -11,6 +11,27 @@ The application checks for the following credentials:
 - **Role Assignments**: User must have role assignments in 3+ servers (shows actual participation)
 - **Verified External Connections**: User must have 2+ verified external connections (Spotify, YouTube, Twitter, etc.)
 
+## Passport Integration
+
+This repository serves as a testing ground for the enhanced Discord Stamp implementation in Gitcoin Passport. The complete, production-ready configuration for integration into the Passport repository is available in:
+
+**[`Discord-Platform-Config-FINAL.ts`](./Discord-Platform-Config-FINAL.ts)**
+
+This file contains:
+- Complete platform configuration ready to copy into `platforms/src/Discord/Providers-config.ts`
+- Comprehensive inline documentation covering all verification criteria
+- OAuth scope requirements and implementation details
+- Rate limiting considerations and best practices
+- Error handling and user messaging guidelines
+- Privacy and data storage specifications
+- Migration strategies and deployment checklist
+
+To integrate this enhanced Discord Stamp into Passport:
+1. Copy `Discord-Platform-Config-FINAL.ts` content to `platforms/src/Discord/Providers-config.ts`
+2. Update `App-Bindings.ts` with the new OAuth scopes
+3. Implement the 4-step verification logic in `discord.ts` provider
+4. Follow the implementation checklist in the config file
+
 ## Screenshots
 
 The app provides:
